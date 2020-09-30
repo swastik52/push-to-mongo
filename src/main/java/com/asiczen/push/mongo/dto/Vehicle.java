@@ -23,4 +23,6 @@ public class Vehicle {
 	private int fuel = 0;
 	private double speed = 0;
 	private double distance = 0;
+	private double totalDistanceDaily=0;
+	private double topSpeed=0;
 }

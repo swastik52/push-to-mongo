@@ -26,18 +26,6 @@ public class DailyMessageServiceImpl implements DailyMessageService {
 	public void savetodb(ConvertedMessage message) {
 
 		MySqlDailyMessage formatMessage = new MySqlDailyMessage();
-
-		// set in db object
-//		formatMessage.setVehicleNumber(message.getVehicleNumber());
-//		formatMessage.setLng(message.getLng());
-//		formatMessage.setLat(message.getLat());
-//
-//		formatMessage.setDriverName(message.getDriverName());
-//		formatMessage.setDriverContact(message.getDriverContact());
-//
-//		formatMessage.setFuel(message.getFuel());
-//		formatMessage.setSpeed(message.getSpeed());
-
 		BeanUtils.copyProperties(message, formatMessage);
 		LocalDateTime dateTime=null;
 		try {

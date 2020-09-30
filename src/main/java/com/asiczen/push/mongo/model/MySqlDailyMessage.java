@@ -45,4 +45,8 @@ public class MySqlDailyMessage implements Serializable{
 	private Double lng;
 	
 	private Double lat;
+	
+	private double totalDistanceDaily;
+	
+	private double topSpeed;
 }
