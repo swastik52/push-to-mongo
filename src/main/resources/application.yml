@@ -1,0 +1,31 @@
+server:
+  port: 9096
+  
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://scorpiousdb:password007@cluster0.qs7wt.mongodb.net/scorpious-demo?retryWrites=true&w=majority      auto-index-creation: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest  
+    listener:
+      simple:
+        concurrency: 5
+        max-concurrency: 8   
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 6
+          max-interval: 10s
+          multiplier: 2  
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dailymessage
+    username: root
+    password: 
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true    
